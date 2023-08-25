@@ -44,4 +44,15 @@ request.onsuccess = async () => {
     const colorQuery = colorIndex.getAll(["Red"]);
     console.log(colorQuery);
 
+
+    // Data fethching using custom indexes with multiple conditions/checkpoints
+    // --------------------------------------------------------------------------------------------------
+    // (!)  This example below uses the get() method instead of getAll() method like the previous one    |
+    //      Therefore, this code below will fetch only the first result that matches it's conditions.    |
+    // --------------------------------------------------------------------------------------------------
+    const colorAndMakeQuery = makeModelIndex.get(["Red", "Polo"]);       //
+    console.log(colorAndMakeQuery);                                     //
+    // -----------------------------------------------------------------
+
+
 }
