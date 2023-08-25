@@ -18,3 +18,12 @@ request.onupgradeneeded = () => {
     store.createIndex("cars_color", ["color"], { unique: false });
     store.createIndex("color_and_make", ["color", "make"], { unique: false });
 };
+
+request.onsuccess = async () => {
+    const db = request.result;
+    const transaction = db.transaction("cars", "readwrite");
+    const store = transaction.objectStore("cars");
+    const colorIndex = store.index("cars_color");
+    const makeModelIndex = store.index("color_and_make");
+
+}
