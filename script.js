@@ -4,3 +4,5 @@ const indexedDB =
     window.webkitIndexedDB ||
     window.msIndexedDB ||
     window.shimIndexedDB;
+
+const request = indexedDB.open("UsersDatabase", 1);
