@@ -6,3 +6,8 @@ const indexedDB =
     window.shimIndexedDB;
 
 const request = indexedDB.open("UsersDatabase", 1);
+
+request.onerror = (event) => {
+    console.log("Some error occured");
+    console.log(event);
+}
