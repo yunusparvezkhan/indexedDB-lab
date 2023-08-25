@@ -26,4 +26,9 @@ request.onsuccess = async () => {
     const colorIndex = store.index("cars_color");
     const makeModelIndex = store.index("color_and_make");
 
+    store.put({ id: 1, color: "Red", make: "Tata Motors" });
+    store.put({ id: 2, color: "Orange", make: "Mahindra" });
+    store.put({ id: 3, color: "Blue", make: "Range Rover" });
+    store.put({ id: 4, color: "White", make: "Hindustan Motors" });
+    store.put({ id: 5, color: "Red", make: "Polo" });
 }
