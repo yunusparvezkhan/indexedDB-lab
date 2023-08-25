@@ -5,7 +5,7 @@ const indexedDB =
     window.msIndexedDB ||
     window.shimIndexedDB;
 
-const request = indexedDB.open("UsersDatabase", 1);
+const request = indexedDB.open("CarsDatabase", 1);
 
 request.onerror = (event) => {
     console.log("Some error occured");
