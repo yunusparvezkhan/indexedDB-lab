@@ -35,8 +35,13 @@ request.onsuccess = async () => {
     store.put({ id: 5, color: "Red", make: "Polo" });
 
     // Data fetching
+
     // Data fetching using unique keyPath
     const idQuery = store.get(2)
     console.log(idQuery);
+
+    // Data fetching using custom indexes
+    const colorQuery = colorIndex.getAll(["Red"]);
+    console.log(colorQuery);
 
 }
