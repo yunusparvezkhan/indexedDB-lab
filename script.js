@@ -54,6 +54,18 @@ request.onsuccess = async () => {
     console.log(colorAndMakeQuery);                                     //
     // -----------------------------------------------------------------
 
+    // Logging results of functions above
+    idQuery.onsuccess = () => {
+        console.log('idQuery: ', idQuery.result)
+    }
+
+    colorQuery.onsuccess = () => {
+        console.log('colorQuery: ', colorQuery.result)
+    }
+
+    colorAndMakeQuery.onsuccess = () => {
+        console.log('colorAndMakeQuery: ', colorAndMakeQuery.result)
+    }
 
 
 }
