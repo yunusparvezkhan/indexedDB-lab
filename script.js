@@ -57,15 +57,20 @@ request.onsuccess = async () => {
     // Logging results of functions above
     idQuery.onsuccess = () => {
         console.log('idQuery: ', idQuery.result)
-    }
+    };
 
     colorQuery.onsuccess = () => {
         console.log('colorQuery: ', colorQuery.result)
-    }
+    };
 
     colorAndMakeQuery.onsuccess = () => {
         console.log('colorAndMakeQuery: ', colorAndMakeQuery.result)
-    }
+    };
+
+    // Close a database on completion of the tasks
+    transaction.oncomplete = () => {
+        db.close();
+    };
 
 
 }
